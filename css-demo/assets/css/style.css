@@ -2,16 +2,24 @@
 
 /*  Palette */
 :root{
-    one:#346654;
-    one-comp:#663844;
-    two:#F0DAB9;
-    two-comp:#A5B1EE;
-    three:#2E0E3D;
-    three-comp:#103D0C;
+    --one:#346654;
+    --one-comp:#663844;
+    --two:#F0DAB9;
+    --two-comp:#A5B1EE;
+    --three:#2E0E3D;
+    --three-comp:#103D0C;
 }
 
-/*--Box Sizing--*/
+/*  Font  */
+/*@font-face {
+    font-family: 'rawline';
+    src: url();
+    src: url()
+    font-weight: 100;
+    font-style: normal;
+}*/ 
 
+/*--Box Sizing--*/
 html {
   box-sizing: border-box;
 }
@@ -23,7 +31,10 @@ html {
 
 
 /*--Global Styles--*/
-
+/** {
+  background-color: var(--two);
+  color: var(--two-comp);
+}*/
 body{
-  background-color: var(two);
+  font-family: "Victor Mono", monospace;
 }
