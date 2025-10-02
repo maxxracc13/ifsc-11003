@@ -11,13 +11,13 @@
 }
 
 /*  Font  */
-/*@font-face {
-    font-family: 'rawline';
-    src: url();
-    src: url()
-    font-weight: 100;
+@font-face {
+    font-family: 'spleen';
+    src: url('fonts/spleenmedium-webfont.woff2') format('woff2'),
+         url('fonts/spleenmedium-webfont.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-}*/ 
+}
 
 /*--Box Sizing--*/
 html {
@@ -31,10 +31,38 @@ html {
 
 
 /*--Global Styles--*/
-/** {
-  background-color: var(--two);
-  color: var(--two-comp);
-}*/
 body{
-  font-family: "Victor Mono", monospace;
+  font-family: 'spleen';
+  background-color: var(--two);
+  color: var(--three);
+  margin:1;
+}
+a {
+  color: var(--one);
+} a:visited {
+  color: var(--one-comp);
+}
+
+header.primary{
+  background-color: var(--two-comp);
+  text-align: center;
+  color: var(--three-comp);
+  /* T,R,B,L */
+  padding: 20px 40px 20px 40px;  
+} header.primary h1{
+  font-size: 2.5rem;
+  margin: 20px 0 0 0;
+} header.primary h1 a{
+  color: var(--one);
+  text-decoration: none;
+} header.primary h2{
+  font-size: 1.6rem;
+  margin: 0 0 0 0;
+} header.primary nav ul{
+  padding:0;
+} header.primary nav ul li{
+  list-style-type: none;
+} header.primary nav ul a{
+  color: var(--one-comp);
+  text-decoration: none;
 }
