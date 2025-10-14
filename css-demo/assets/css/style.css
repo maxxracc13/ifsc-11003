@@ -37,6 +37,28 @@ html {
   margin: 20px auto;
 }
 
+.img-right{
+  float:right;
+  margin: 10px 0 10px 20px;
+  border:1px solid rgba(0, 0, 0, 0.2);
+  padding:10px 10px 40px 10px;
+  background-color:#fcf7e8;
+}
+.img-left{
+  float:left;
+  margin: 10px 0 10px 20px;
+  border:1px solid rgba(0, 0, 0, 0.2);
+  padding:10px 10px 40px 10px;
+  background-color:#fcf7e8;
+}
+.img-center{
+  display:block;
+  margin:20px auto;
+  border:1px solid rgba(0, 0, 0, 0.2);
+  padding:10px 10px 40px 10px;
+  background-color:#fcf7e8;
+}
+
 /*--Responsive Images--*/
 img{
   max-width: 100%;
@@ -45,14 +67,18 @@ img{
 /*--Global Styles--*/
 body{
   font-family: 'spleen';
+  font-size: large;
   background-color: var(--two);
   color: var(--three);
   margin:1;
+  background-image: url("../img/stars.png");
 }
 a {
   color: var(--one);
 } a:visited {
   color: var(--one-comp);
+} a:hover{
+  text-decoration: none;
 }
 
 header.primary{
@@ -93,26 +119,89 @@ header.primary nav ul{
 
 #intro h2 {
   color: var(--three-comp);
-  border-bottom: 2px dashed var(--three-comp);
+  border-bottom: 2px dotted var(--three-comp);
 }
 #content{
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10px;
-} #content .post{
+  border-top: 2px dashed var(--three-comp);
+  border-bottom: 2px dashed var(--three-comp);
+  padding: 25px 0;
+} 
+#content .post{
   background-color: var(--two-comp);
   box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.5);
   padding: 10px;
   font-size: .9rem;
 } #content .post figure{
   margin: 0;
-} #content time.post-date{
+} 
+#content time.post-date{
   text-transform: uppercase;
-} #content figcaption{
+} 
+#content figcaption{
   font-style: italic;
-} #content a:hover{
-  text-decoration: none;
+} 
+
+#practice h2{
+  color: var(--three-comp);
+  border-bottom: 2px dotted var(--three-comp);
+} #practice h3{
+  border-left: 12px solid var(--one);
+  padding-left: 5px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+#practice table{
+  width: 100%;
+  border: 2px dashed var(--one);
+  border-collapse: collapse;
+}
+#practice caption{
+  font-weight:bold;
+  font-size: 1.3rem;
+  margin: 3px;
+}
+#practice tr:nth-child(even){
+  background-color: rgba(165, 177, 238, 0.4);
+}
+#practice th{
+  background-color: rgba(16, 61, 12, 0.4);
+  color: var(--three);
+}
+#practice td{
+  border: 2px dashed var(--one);
+  padding-left: 5px;
+} #practice td:hover{
+  background-color: rgba(165, 177, 238, 0.6);
+} #practice td:nth-child(1n+2){
+  text-align:right;
+}
+#practice ol{
+  list-style-type: lower-roman;
+}
+#practice dt{
+  text-decoration: underline;
+} #practice dd{
+  font-style: italic;
+} #practice dd+dt{
+  margin-top: 5px;
+}
+#practice blockquote{
+  border: 4px double #c0c0c0;
+  padding:20px 40px;
+  margin: 0 80px;
+  border-radius:30px 0;
+  background-color: var(--two-comp);
+  color: var(--one-comp);
+  text-shadow:1px 1px rgba(0, 0, 0, 0.3);
+} #practice blockquote cite{
+  font-size:medium;
+  text-align: right;
+  display:block;
+  margin-top: 5px;
 }
 
 aside[role="complementary"]{
@@ -153,5 +242,9 @@ aside[role="complementary"]{
   .container{
     max-width:90vw;
     margin:20px auto;
+  }
+  #content{
+    flex-direction: column;
+    gap: 15px;
   }
 }
